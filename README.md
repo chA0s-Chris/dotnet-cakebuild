@@ -25,6 +25,16 @@ dotnet cake build.cake --target="CI" --configuration="Debug"
 
 
 
+## Pre-built image
+
+A pre-built image can be found on [Docker Hub](https://hub.docker.com/r/chaos/dotnet-cakebuild):
+
+```bash
+docker pull chaos/dotnet-cakebuild:latest
+```
+
+
+
 ## License
 
 [MIT](https://github.com/chA0s-Chris/dotnet-cakebuild/blob/master/LICENSE)
