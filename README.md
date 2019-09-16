@@ -4,6 +4,8 @@ A simple Docker image based on the official **dotnet core sdk image** including 
 
 You can use this image for automated builds of .NET Core projects using Cake, e.g. with **Gitlab**.
 
+As of [v0.4](https://github.com/chA0s-Chris/dotnet-cakebuild/releases/tag/0.4) the image includes the Docker CLI.
+
 
 
 ## Usage
@@ -22,6 +24,22 @@ Arguments can be passed the same way you would using Cake original **build.sh**.
 ```bash
 dotnet cake build.cake --target="CI" --configuration="Debug"
 ```
+
+
+
+## Using Docker from inside the image
+
+To use Docker from inside the image, just mount (bind) the host's `docker.sock` to your container. For example:
+
+```bash
+docker run -it \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	chaos/dotnet-cakebuild:latest
+```
+
+Be aware of the security implications this brings with. The container from the example can do anything with the host's Docker service, including removing containers and so on.
+
+It's not recommended to use this method outside of a controlled environment.
 
 
 
