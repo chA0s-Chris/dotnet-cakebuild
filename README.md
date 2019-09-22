@@ -1,3 +1,9 @@
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chA0s-Chris/dotnet-cakebuild?label=version&style=plastic)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/chaos/dotnet-cakebuild?style=plastic)
+![Docker Pulls](https://img.shields.io/docker/pulls/chaos/dotnet-cakebuild?style=plastic)
+![GitHub](https://img.shields.io/github/license/chA0s-Chris/dotnet-cakebuild?style=plastic)
+
+
 # dotnet-cakebuild
 
 A simple Docker image based on the official **dotnet core sdk image** including [Cake](https://cakebuild.net/) ([Github repository](https://github.com/cake-build/cake)) as a global dotnet tool.
